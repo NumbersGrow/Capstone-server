@@ -7,7 +7,8 @@ exports.up = function (knex) {
       table.uuid('id').primary();
       table
         .uuid('festival_id')
-        .references('festivals.id')
+        .references('id')
+        .inTable('festivals')
         .onUpdate('CASCADE')
         .onDelete('CASCADE');
       table.string('product').notNullable();

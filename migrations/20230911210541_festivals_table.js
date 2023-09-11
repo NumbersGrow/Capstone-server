@@ -5,6 +5,7 @@ exports.up = function (knex) {
     table.uuid('id').primary();
     table.string('organization').notNullable();
     table.string('description').notNullable();
+    table.string('availability').notNullable();
     table.string('type').notNullable();
     table.string('address').notNullable();
     table.timestamps(true, true);
