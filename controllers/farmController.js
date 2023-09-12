@@ -1,7 +1,7 @@
 const knex = require("knex")(require("../knexfile"));
 const query = require("express");
 // const emailValidator = require("deep-email-validator");
-const farmModel = require("../models/farmModel");
+// const farmModel = require("../models/farmModel");
 
 exports.singleFarm = (req, res) => {
   knex("farms")

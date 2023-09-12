@@ -1,7 +1,7 @@
 const knex = require("knex")(require("../knexfile"));
 const query = require("express");
 // const emailValidator = require("deep-email-validator");
-const farmModel = require("../models/festivalModel");
+// const festivalModel = require("../models/festivalModel");
 
 exports.singleFestival = (req, res) => {
   knex("festivals")

@@ -1,6 +1,6 @@
 const knex = require("knex")(require("../knexfile"));
 const query = require("express");
-const inventoryModel = require("../models/festivalProductionModel");
+// const festivalProductionModel = require("../models/festivalProductionModel");
 
 exports.festivalProduction = (req, res) => {
   knex("festival_production")

@@ -1,6 +1,6 @@
 const knex = require("knex")(require("../knexfile"));
 const query = require("express");
-const inventoryModel = require("../models/farmProductionModel");
+// const inventoryModel = require("../models/farmProductionModel");
 
 exports.farmProduction = (req, res) => {
   knex("farm_production")
