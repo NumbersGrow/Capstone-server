@@ -1,7 +1,16 @@
 const knex = require("knex")(require("../knexfile"));
-const query = require("express");
-// const emailValidator = require("deep-email-validator");
+// const query = require("express");
 // const farmModel = require("../models/farmModel");
+
+exports.index = (_req, res) => {
+  knex('farms')
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) =>
+      res.status(400).send(`Error retrieving farms: ${err}`)
+    );
+};
 
 exports.singleFarm = (req, res) => {
   knex("farms")

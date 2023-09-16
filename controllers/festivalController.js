@@ -1,7 +1,17 @@
 const knex = require("knex")(require("../knexfile"));
-const query = require("express");
+// const query = require("express");
 // const emailValidator = require("deep-email-validator");
 // const festivalModel = require("../models/festivalModel");
+
+exports.index = (_req, res) => {
+  knex('festivals')
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) =>
+      res.status(400).send(`Error retrieving festivals: ${err}`)
+    );
+};
 
 exports.singleFestival = (req, res) => {
   knex("festivals")

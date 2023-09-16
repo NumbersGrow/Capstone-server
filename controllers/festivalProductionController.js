@@ -2,6 +2,16 @@ const knex = require("knex")(require("../knexfile"));
 const query = require("express");
 // const festivalProductionModel = require("../models/festivalProductionModel");
 
+exports.index = (_req, res) => {
+  knex('festival_production')
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) =>
+      res.status(400).send(`Error retrieving festival production: ${err}`)
+    );
+};
+
 exports.festivalProduction = (req, res) => {
   knex("festival_production")
     .select()

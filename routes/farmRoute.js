@@ -2,9 +2,13 @@ const router = require("express").Router();
 const farmController = require("../controllers/farmController");
 const farmProductionController = require("../controllers/farmProductionController");
 
-router
-  .route("/")
-  .get(farmController.index);
+
+router 
+  .route("/").get(farmController.index);
+
+// router
+//   .route("/farms")
+//   .get(farmController.index)
 
 router
   .route("/:id")
@@ -16,7 +20,6 @@ router
   .route("/:id/farm_production")
   .get(farmProductionController.farmProduction);
 
-router 
-  .route("/")
+
 
 module.exports = router;

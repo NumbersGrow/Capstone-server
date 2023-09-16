@@ -2,6 +2,16 @@ const knex = require("knex")(require("../knexfile"));
 const query = require("express");
 // const inventoryModel = require("../models/farmProductionModel");
 
+exports.index = (_req, res) => {
+  knex('farm_production')
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) =>
+      res.status(400).send(`Error retrieving farm production: ${err}`)
+    );
+};
+
 exports.farmProduction = (req, res) => {
   knex("farm_production")
     .select()
