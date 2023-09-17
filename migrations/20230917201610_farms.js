@@ -10,6 +10,7 @@ exports.up = function (knex) {
     table.string('contact_phone').notNullable();
     table.string('website').notNullable();
     table.string('promotion').notNullable();
+    table.string('image').notNullable();
     table.timestamps(true, true);
   });
 };

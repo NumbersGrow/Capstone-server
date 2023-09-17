@@ -12,5 +12,8 @@ exports.seed = function (knex) {
     })
     .then(() => {
       return knex('farm_production').insert(productionData);
+    })
+    .catch((error) => {
+      console.error('Error seeding data:', error);
     });
 };
