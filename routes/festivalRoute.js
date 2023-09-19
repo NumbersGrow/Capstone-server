@@ -4,11 +4,7 @@ const festivalProductionController = require("../controllers/festivalProductionC
 
 router.route("/").get(festivalController.index);
 
-router
-  .route("/:id")
-  //   .delete(warehouseController.deleteWarehouse)
-  .get(festivalController.singleFestival);
-//   .put(warehouseController.updateWarehouse);
+router.route("/:id").get(festivalController.singleFestival);
 
 router
   .route("/:id/festival_production")

@@ -1,5 +1,4 @@
 const knex = require("knex")(require("../knexfile"));
-// const contactInfo = "concat(contact_phone, ' ', contact_email) as contact_info";
 
 exports.getDefaultFestivals = async () => {
   try {
